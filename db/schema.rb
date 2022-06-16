@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_16_020838) do
+ActiveRecord::Schema.define(version: 2022_06_16_073742) do
 
   create_table "comments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "content"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2022_06_16_020838) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["division_id"], name: "index_users_on_division_id"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "comments", "reports"
