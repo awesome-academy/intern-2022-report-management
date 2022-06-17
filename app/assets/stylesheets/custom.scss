@@ -3,9 +3,25 @@
 @import "colors";
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-color: blue;
+  --red-color: red;
+  --white-color: #fafafa
+}
+
+.btn-success {
+  background-color: var(--blue-color);
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background: #fafafa;
+  background: var(--white-color);
 }
 
 .form-control {
@@ -200,4 +216,21 @@ a[aria-expanded="true"]::before {
 
 #logo {
   font-weight: 800;
+}
+
+.title-center {
+  text-align: center;
+}
+
+.div-new-report {
+  padding: 0px 40px;
+}
+
+.div-date-report {
+  text-align: right;
+  padding: 20px 10px;
+}
+
+.require-field {
+  color: var(--red-color);
 }

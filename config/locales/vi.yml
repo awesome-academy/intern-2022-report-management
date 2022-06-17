@@ -26,9 +26,11 @@ vi:
       toggle_sidebar: "Toggle Sidebar"
     sidebar:
       logo: "DAILY REPORT"
-      link_1: "Home"
-      link_2: "Home 1"
-      link_3: "User"
+      home: "Trang chủ"
+      division: "Bộ phận của bạn"
+      report: "Báo cáo hàng ngày"
+      admin: "Admin"
+      manager: "Manager"
   sessions:
     ivalid_account_notify: "Tài khỏan hoặc mật khẩu bị sai."
     login_success_notify: "Đăng nhập thành công!"
@@ -39,3 +41,14 @@ vi:
       welcome_login: "Đăng nhập vào tài khoản của bạn"
       answer_account: "Bạn chưa có tài khoản?"
       sign_up: "Đăng ký"
+  reports:
+    create_success_notify: "Created success! Report was sent to your manager."
+    create_failed_notify: "Failed! Can not create report."
+    show:
+      daily_report: "Báo Cáo Hàng Ngày"
+      create: "Tạo"
+    new:
+      create_report: "Báo Cáo Hàng Ngày"
+      today: "Hôm nay:"
+    form:
+      create: "Tạo Báo Cáo"

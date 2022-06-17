@@ -6,3 +6,9 @@ user:
     max_length: 50
   password:
     min_length: 6
+report:
+  column:
+    max_length: 255
+form:
+  create_form:
+    num_row: 4
