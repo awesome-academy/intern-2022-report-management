@@ -44,11 +44,33 @@ vi:
   reports:
     create_success_notify: "Created success! Report was sent to your manager."
     create_failed_notify: "Failed! Can not create report."
-    show:
+    create_failed_notify: "Thất bại! Không thể tạo report."
+    delete_report_failed: "Thất bại! Không thể xóa report."
+    delete_report_success: "Xóa thành công!"
+    find_report_error: "Không thể tìm report!"
+    index:
       daily_report: "Báo Cáo Hàng Ngày"
       create: "Tạo"
+    all_report:
+      all_report: "Tất cả report"
+      id: "Stt"
+      name: "Tên"
+      plan: "Kế hoạch"
+      create_at: "Ngày tạo"
+      update_at: "Ngày cập nhật"
+      status: "Trạng thái"
+      action: "Hành động"
+    report:
+      delete: "Xóa"
+      edit: "Sửa"
+      confirm_delete: "Bạn có muốn xóa không?"
+      detail: "Chi tiết"
     new:
       create_report: "Báo Cáo Hàng Ngày"
       today: "Hôm nay:"
     form:
       create: "Tạo Báo Cáo"
+    filter_form:
+      search: "Lọc"
+      date_created: "Ngày tạo"
+      status: "Trạng thái"

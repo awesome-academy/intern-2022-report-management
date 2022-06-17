@@ -1,0 +1,16 @@
+<tr>
+  <td><%= report.id %></td>
+  <td><%= report.name %>
+  <td><%= report.today_plan %>
+  <td><%= report.created_at.strftime(Settings.reports.report.format_datetime) %></td>
+  <td><%= report.status %></td>
+  <td>
+      <%= link_to t(".detail"), report_path(report.id) %>
+      |
+      <% if report.waitting? %>
+        <%= button_to t(".delete"), report_path(report), method: :delete, data: { confirm: t(".confirm_delete") }, remote: :true %>
+      |
+      <%= link_to t(".edit"), edit_report_path(report) %>
+      <% end %>
+    </td>
+</tr>
