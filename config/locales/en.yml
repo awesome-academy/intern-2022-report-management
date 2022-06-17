@@ -1,34 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   home:
     index:
@@ -39,7 +8,7 @@ en:
     new:
       title: "Sign up"
       answer_account: "Already have an account?"
-      sign_in: "Sign in"
+      sign_in: "Log in"
       register: "Register"
       welcome_register: "Create your account. It's free and only takes a minute."
     form:
@@ -51,3 +20,22 @@ en:
     error_messages:
       message_error: "The form contains"
       error: "error"
+  layouts:
+    navbar:
+      log_out: "Log out"
+      toggle_sidebar: "Toggle Sidebar"
+    sidebar:
+      logo: "DAILY REPORT"
+      link_1: "Home"
+      link_2: "Home 1"
+      link_3: "User"
+  sessions:
+    ivalid_account_notify: "Invalid password or account combination"
+    login_success_notify: "Log in successed!"
+    new:
+      title: "Log in"
+      email: "Email"
+      password: "Password"
+      welcome_login: "Log in to your accout"
+      answer_account: "You don't have an account?"
+      sign_up: "Sign up"
