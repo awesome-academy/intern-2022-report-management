@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  UPDATABLE_ATTRS = %i(name email password password_confirmation).freeze
+
+  enum role: {member: 0, manager: 1, admin: 2}
+
   VALID_EMAIL_REGEX = Settings.user.email_regex
 
   belongs_to :division, optional: true

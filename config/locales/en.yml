@@ -26,9 +26,11 @@ en:
       toggle_sidebar: "Toggle Sidebar"
     sidebar:
       logo: "DAILY REPORT"
-      link_1: "Home"
-      link_2: "Home 1"
-      link_3: "User"
+      home: "Home"
+      division: "Your Division"
+      report: "Daily Report"
+      admin: "Admin"
+      manager: "Manager"
   sessions:
     ivalid_account_notify: "Invalid password or account combination"
     login_success_notify: "Log in successed!"
@@ -38,4 +40,34 @@ en:
       password: "Password"
       welcome_login: "Log in to your accout"
       answer_account: "You don't have an account?"
-      sign_up: "Sign up"
+      sign_up: "Sign Up"
+  reports:
+    create_success_notify: "Created success! Report was sent to your manager."
+    create_failed_notify: "Failed! Can not create report."
+    delete_report_failed: "Can not delete this report!"
+    delete_report_success: "Deleted success!"
+    find_report_error: "Can not find report!"
+    index:
+      daily_report: "Daily Report"
+      create: "Create"
+    all_report:
+      all_report: "All report"
+      id: "Id"
+      create_at: "Created at"
+      update_at: "Updated at"
+      status: "Status"
+      action: "Action"
+    report_table:
+      delete: "Delete"
+      edit: "Edit"
+      confirm_delete: "Are you sure?"
+      detail: "Detail"
+    new:
+      create_report: "Create Daily Report"
+      today: "Today:"
+    form:
+      create: "Create"
+    filter_form:
+      search: "Filter"
+      date_created: "Date created"
+      status: "Status"

@@ -6,3 +6,15 @@ user:
     max_length: 50
   password:
     min_length: 6
+report:
+  column:
+    max_length: 255
+  items:
+    item_per_page: 5
+form:
+  create_form:
+    num_row: 4
+paginate:
+  items_per_page: 10
+select_option:
+  filter_status: [["All", ""], ["Waitting", "0"], ["Checked", "1"]]
