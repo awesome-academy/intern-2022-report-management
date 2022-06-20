@@ -30,11 +30,9 @@ ActiveRecord::Schema.define(version: 2022_06_16_073742) do
 
   create_table "notifications", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "report_id", null: false
     t.boolean "unread"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["report_id"], name: "index_notifications_on_report_id"
     t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
@@ -44,6 +42,8 @@ ActiveRecord::Schema.define(version: 2022_06_16_073742) do
     t.text "reason_not_complete"
     t.text "tomorrow_plan"
     t.text "free_comment"
+    t.integer "status", default: 0
+    t.boolean "deleted", default: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2022_06_16_073742) do
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.integer "role", default: 1
+    t.integer "role", default: 0
     t.string "password_digest"
     t.boolean "activated", default: false
     t.string "reset_digest"
@@ -67,7 +67,6 @@ ActiveRecord::Schema.define(version: 2022_06_16_073742) do
 
   add_foreign_key "comments", "reports"
   add_foreign_key "comments", "users"
-  add_foreign_key "notifications", "reports"
   add_foreign_key "notifications", "users"
   add_foreign_key "reports", "users"
   add_foreign_key "users", "divisions"

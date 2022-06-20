@@ -6,6 +6,8 @@ class CreateReports < ActiveRecord::Migration[6.1]
       t.text :reason_not_complete
       t.text :tomorrow_plan
       t.text :free_comment
+      t.integer :status, default: 0
+      t.boolean :deleted, default: false
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
