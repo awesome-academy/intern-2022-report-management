@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     get "/logout", to: "sessions#destroy"
 
-    resources :reports, except: %i(index destroy)
+    resources :reports
   end
 end

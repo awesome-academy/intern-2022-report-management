@@ -6,7 +6,7 @@
 <div class="div-new-report">
   <div class="div-date-report">
     <%= t ".today" %>
-    <%= Time.now.strftime("%d/%m/%Y") %>
+    <%= Time.now.strftime(Settings.reports.report.format_date) %>
   </div>
   <%= render "form", report: @report %>
 </div>

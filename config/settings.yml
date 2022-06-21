@@ -9,6 +9,12 @@ user:
 report:
   column:
     max_length: 255
+  items:
+    item_per_page: 5
 form:
   create_form:
     num_row: 4
+reports:
+  report:
+    format_datetime: "%d/%m/%Y %H:%M"
+    format_date: "%d/%m/%Y"

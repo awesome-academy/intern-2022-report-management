@@ -26,12 +26,14 @@ gem "jbuilder", "~> 2.7"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.4", require: false
+gem "pagy"
 
 group :development, :test do
   gem "pry-rails"
 end
 
 group :development do
+  gem "bullet"
   gem "listen", "~> 3.3"
   gem "rack-mini-profiler", "~> 2.0"
   gem "spring"
