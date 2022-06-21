@@ -48,6 +48,10 @@ vi:
     delete_report_failed: "Thất bại! Không thể xóa report."
     delete_report_success: "Xóa thành công!"
     find_report_error: "Không thể tìm report!"
+    edit_report_success: "Thành công!"
+    edit_report_faild: "Thất bại!"
+    delete_success: "Thành công"
+    delete_fail: "Thất bại"
     index:
       daily_report: "Báo Cáo Hàng Ngày"
       create: "Tạo"
@@ -65,12 +69,27 @@ vi:
       edit: "Sửa"
       confirm_delete: "Bạn có muốn xóa không?"
       detail: "Chi tiết"
+      edit: "Chỉnh sửa"
     new:
       create_report: "Báo Cáo Hàng Ngày"
       today: "Hôm nay:"
+      create: "Tạo"
     form:
       create: "Tạo Báo Cáo"
     filter_form:
       search: "Lọc"
       date_created: "Ngày tạo"
       status: "Trạng thái"
+    show:
+      report: "BÁO CÁO"
+      name: "Tên"
+      created_at: "Ngày tạo"
+      today_plan: "Kế hoạch"
+      actual: "Thực tế"
+      reason_not_complete: "Lý do không hoàn thành"
+      tomorrow_plan: "Kế hoạch ngày mai"
+      free_comment: "Bình luận"
+      status: "Trạng thái"
+    edit:
+      title: "Chỉnh sửa báo cáo"
+      save_change: "Lưu thay đổi"

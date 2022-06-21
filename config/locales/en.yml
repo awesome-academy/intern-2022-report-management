@@ -47,6 +47,10 @@ en:
     delete_report_failed: "Can not delete this report!"
     delete_report_success: "Deleted success!"
     find_report_error: "Can not find report!"
+    edit_report_success: "Success!"
+    edit_report_faild: "Faild!"
+    delete_success: "Delete Success"
+    delete_fail: "Delete Fail"
     index:
       daily_report: "Daily Report"
       create: "Create"
@@ -64,12 +68,27 @@ en:
       edit: "Edit"
       confirm_delete: "Are you sure?"
       detail: "Detail"
+      edit: "Edit"
     new:
       create_report: "Create Daily Report"
       today: "Today:"
+      create: "Create"
     form:
       create: "Create"
     filter_form:
       search: "Filter"
       date_created: "Date created"
       status: "Status"
+    show:
+      report: "REPORT"
+      name: "Writer"
+      created_at: "Created At"
+      today_plan: "Today Plan"
+      actual: "Actual"
+      reason_not_complete: "Reason not complete"
+      tomorrow_plan: "Tomorrow Plan"
+      free_comment: "Free Comment"
+      status: "Status"
+    edit:
+      title: "Edit report"
+      save_change: "Save change"

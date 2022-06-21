@@ -1,10 +1,53 @@
-<%= provide :title, t(".daily_report") %>
-<h1>
-  <%= t ".daily_report" %>
-</h1>
-<div class="div-report-filter">
+<%= provide :title, t(".report") %>
+<div class="user-info report-detail col-md-12">
+  <div class="col-md-10">
+    <div class="col-md-12 box-info">
+      <span>
+        <%= t ".name" %>
+      </span>
+      <%= @report.name %>
+    </div>
+  </div>
 </div>
-<div class="div-create-bth">
-  <%= link_to t(".create"), new_report_path %>
+<div class="report-detail col-md-12">
+  <div class="col-md-12 box-info">
+    <p>
+      <%= t ".today_plan" %>
+    </p>
+    <%= @report.today_plan %>
+  </div>
+  <div class="col-md-12 box-info">
+    <p>
+      <%= t ".actual" %>
+    </p>
+    <%= @report.actual %>
+  </div><div class="col-md-12 box-info">
+    <p>
+      <%= t ".reason_not_complete" %>
+    </p>
+    <%= @report.reason_not_complete %>
+  </div><div class="col-md-12 box-info">
+    <p>
+      <%= t ".tomorrow_plan" %>
+    </p>
+    <%= @report.tomorrow_plan %>
+  </div>
+  <div class="col-md-12 box-info">
+    <p>
+      <%= t ".free_comment" %>
+    </p>
+    <%= @report.free_comment %>
+  </div>
+  <div class="col-md-12 box-info">
+    <p>
+      <%= t ".created_at" %>
+    </p>
+    <%= @report.created_at.strftime Settings.reports.report.format_date %>
+  </div>
+  <div class="col-md-12 box-info">
+    <p>
+      <%= t ".status" %>
+    </p>
+    <%= @report.status %>
+  </div>
 </div>
-<div class="div-all-report"></div>

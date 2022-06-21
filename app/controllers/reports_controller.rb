@@ -27,6 +27,29 @@ class ReportsController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @report.update report_params
+      flash[:success] = t ".edit_report_success"
+      redirect_to reports_path
+    else
+      flash[:danger] = t ".edit_report_faild"
+      redirect_to edit_report_path params[:id]
+    end
+  end
+
+  def show; end
+
+  def destroy
+    if @report.destroy
+      flash[:success] = t ".delete_success"
+    else
+      flash[:danger] = t ".delete_fail"
+    end
+    redirect_to reports_url
+  end
+
   private
 
   def report_params
