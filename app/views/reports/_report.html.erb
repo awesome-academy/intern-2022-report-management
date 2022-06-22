@@ -4,13 +4,11 @@
   <td><%= report.today_plan %>
   <td><%= report.created_at.strftime(Settings.reports.report.format_datetime) %></td>
   <td><%= report.status %></td>
-  <td>
-      <%= link_to t(".detail"), report_path(report.id) %>
-      |
+  <td class="flex content-center">
+      <%= link_to t(".detail"), report_path(report.id), class: "m-l-5 btn btn-info info" %>
       <% if report.waitting? %>
-        <%= button_to t(".delete"), report_path(report), method: :delete, data: { confirm: t(".confirm_delete") }, remote: :true %>
-      |
-      <%= link_to t(".edit"), edit_report_path(report) %>
+        <%= button_to t(".delete"), report_path(report), method: :delete, data: { confirm: t(".confirm_delete") }, class: "m-l-5 btn btn-danger danger",remote: :true %>
+      <%= link_to t(".edit"), edit_report_path(report), class: "m-l-5 btn btn-primary primary" %>
       <% end %>
     </td>
 </tr>
