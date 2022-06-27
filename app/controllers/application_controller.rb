@@ -6,13 +6,19 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def check_role? role
+    return if current_user.send("#{role}?")
+
+    redirect_to root_path
+  end
+
   def redirect_root
     return unless logged_in?
 
     redirect_to root_path
   end
 
-  def check_if_user_login
+  def require_login
     return if logged_in?
 
     redirect_to login_path

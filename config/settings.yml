@@ -11,10 +11,17 @@ report:
     max_length: 255
   items:
     item_per_page: 5
+comment:
+  max_length: 500
 form:
   create_form:
     num_row: 4
+    num_row_comment: 5
 reports:
   report:
     format_datetime: "%d/%m/%Y %H:%M"
     format_date: "%d/%m/%Y"
+division:
+  default: "Ruby"
+image:
+  default_avatar: "default-avatar.jpg"
