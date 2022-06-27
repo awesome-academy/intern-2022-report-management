@@ -1,0 +1,15 @@
+<tr>
+  <td>
+    <% if report.waitting? %>
+      <%= check_box_tag "report_ids[]", report.id, false, class: "report-checkbox" %>
+    <% else %>
+      <%= check_box_tag "report_ids[]", report.id, false, disabled: true %>
+    <% end %>
+  </td>
+  <td><%= report.division_name %>
+  <td><%= report.name %></td>
+  <td><%= report.today_plan %></td>
+  <td><%= report.created_at.strftime(Settings.reports.report.format_date) %></td>
+  <td><%= report.status %></td>
+  <td><%= t ".detail" %></td>
+</tr>

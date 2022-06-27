@@ -261,6 +261,19 @@ a[aria-expanded="true"]::before {
   margin-top: 45px;
 }
 
+.center-action {
+  text-align: center;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.m-l-5 {
+  margin-left: 5px;
+}
+
 .box-show {
   box-shadow: 0 0.46875rem 2.1875rem rgba(4,9,20,0.03), 0 0.9375rem 1.40625rem rgba(4,9,20,0.03), 0 0.25rem 0.53125rem rgba(4,9,20,0.05), 0 0.125rem 0.1875rem rgba(4,9,20,0.03);
   background-color: white;
@@ -315,4 +328,24 @@ a[aria-expanded="true"]::before {
 
 .padding-0 {
   padding: 0px;
+}
+
+.manager-form-group {
+  display: block;
+  width: 100%;
+}
+
+.manager-form-filter {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.filter-items {
+  width: 20%;
+}
+
+select#report_division_id {
+  width: 25%;
+  height: 40px;
 }
