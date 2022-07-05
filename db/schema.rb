@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_16_073742) do
+ActiveRecord::Schema.define(version: 2022_06_28_144001) do
 
   create_table "comments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "content"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 2022_06_16_073742) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "division_id"
+    t.index ["division_id"], name: "index_reports_on_division_id"
     t.index ["user_id"], name: "index_reports_on_user_id"
   end
 
@@ -58,7 +60,7 @@ ActiveRecord::Schema.define(version: 2022_06_16_073742) do
     t.boolean "activated", default: false
     t.string "reset_digest"
     t.datetime "reset_send_at"
-    t.bigint "division_id", default: 1, null: false
+    t.bigint "division_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["division_id"], name: "index_users_on_division_id"
@@ -68,6 +70,7 @@ ActiveRecord::Schema.define(version: 2022_06_16_073742) do
   add_foreign_key "comments", "reports"
   add_foreign_key "comments", "users"
   add_foreign_key "notifications", "users"
+  add_foreign_key "reports", "divisions"
   add_foreign_key "reports", "users"
   add_foreign_key "users", "divisions"
 end

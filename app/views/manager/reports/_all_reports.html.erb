@@ -1,0 +1,29 @@
+<div>
+  <h4>
+    <%= t ".all_report" %>
+    (<span id="num-reports">
+      <%= @reports.size %>
+    </span>)
+  </h4>
+</div>
+<%= form_tag manager_reports_path, method: :put, remote: true, id: "checkbox-form" do %>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th><%= t ".select" %></th>
+        <th><%= t ".division" %></th>
+        <th><%= t ".name" %></th>
+        <th><%= t ".plan" %></th>
+        <th><%= t ".date_created" %></th>
+        <th><%= t ".status" %></th>
+        <th><%= t ".action" %></th>
+      </tr>
+    </thead>
+    <tbody id="body-report-table">
+      <%= render @reports %>
+    </tbody>
+  </table>
+  <%= submit_tag t(".checked"), class: "btn btn-link", id: "btn-checked-report" %>
+  <%= link_to t(".show_all"), manager_reports_path %>
+<% end %>
+<%== pagy_nav(@pagy) %>

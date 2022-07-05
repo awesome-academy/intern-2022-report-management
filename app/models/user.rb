@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :notifications, dependent: :destroy
 
+  delegate :name, to: :division, prefix: true
+
   validates :name, presence: true,
             length: {maximum: Settings.user.name.max_length}
 
@@ -24,6 +26,15 @@ class User < ApplicationRecord
   has_secure_password
 
   before_save :downcase_email
+
+  scope :by_division_id,
+        (lambda do |division_id|
+          where(division_id: division_id)
+        end)
+  scope :by_name,
+        (lambda do |name|
+          where("name like :name", name: "%#{name}%") if name.present?
+        end)
 
   private
 

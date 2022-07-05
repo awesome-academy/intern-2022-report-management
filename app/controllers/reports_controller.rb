@@ -1,6 +1,7 @@
 class ReportsController < ApplicationController
-  before_action :check_if_user_login
+  before_action :require_login
   before_action :find_report, except: %i(new create index)
+  before_action{check_role? :member}
 
   def index
     @reports = current_user.reports.active.recent
@@ -20,7 +21,7 @@ class ReportsController < ApplicationController
 
     if @report.save
       flash[:info] = t ".create_success_notify"
-      redirect_to report_path(current_user)
+      redirect_to reports_path
     else
       flash.now[:danger] = t ".create_failed_notify"
       render :new

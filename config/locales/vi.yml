@@ -31,6 +31,7 @@ vi:
       report: "Báo cáo hàng ngày"
       admin: "Admin"
       manager: "Manager"
+      account: "Tài khoản"
   sessions:
     ivalid_account_notify: "Tài khỏan hoặc mật khẩu bị sai."
     login_success_notify: "Đăng nhập thành công!"
@@ -55,6 +56,7 @@ vi:
     index:
       daily_report: "Báo Cáo Hàng Ngày"
       create: "Tạo"
+      belong_division_notify: "Bạn không thuộc bất kỳ bộ phận nào."
     all_report:
       all_report: "Tất cả report"
       id: "Stt"
@@ -76,6 +78,7 @@ vi:
       create: "Tạo"
     form:
       create: "Tạo Báo Cáo"
+      division: "Bộ phận"
     filter_form:
       search: "Lọc"
       date_created: "Ngày tạo"
@@ -83,6 +86,7 @@ vi:
     show:
       report: "BÁO CÁO"
       name: "Tên"
+      division: "Bộ phận"
       created_at: "Ngày tạo"
       today_plan: "Kế hoạch"
       actual: "Thực tế"
@@ -93,3 +97,31 @@ vi:
     edit:
       title: "Chỉnh sửa báo cáo"
       save_change: "Lưu thay đổi"
+  manager:
+    reports:
+      index:
+        title: "Tất cả báo cáo"
+        all_report: "Tất cả báo cáo trong "
+      all_reports:
+        all_report: "Tất cả báo cáo"
+        id: "Id"
+        name: "Tên"
+        plan: "Dự định"
+        date_created: "Ngày tạo"
+        status: "Trạng thái"
+        action: "Hành động"
+        checked: "Đã kiểm tra"
+        select: "Chọn"
+        show_all: "Hiển thị tất cả"
+      report:
+        detail: "Chi tiết"
+        waiting: "Đợi"
+        checked: "Checked"
+      filter_form:
+        filter: "Lọc"
+        email: "Email"
+        name: "Tên"
+        division: "Bộ phận"
+  account:
+    index:
+      title: "Thông tin tài khoản"
