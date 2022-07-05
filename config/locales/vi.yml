@@ -101,16 +101,7 @@ vi:
       date_created: "Ngày tạo"
       status: "Trạng thái"
     show:
-      report: "BÁO CÁO"
-      name: "Tên"
-      division: "Bộ phận"
-      created_at: "Ngày tạo"
-      today_plan: "Kế hoạch"
-      actual: "Thực tế"
-      reason_not_complete: "Lý do không hoàn thành"
-      tomorrow_plan: "Kế hoạch ngày mai"
-      free_comment: "Bình luận"
-      status: "Trạng thái"
+      title: "Chi tiết báo cáo"
     edit:
       title: "Chỉnh sửa báo cáo"
       save_change: "Lưu thay đổi"

@@ -40,7 +40,12 @@ class ReportsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @user = @report.user
+    @comments = Comment.by_report_id(params[:id])
+                       .order_by_created_at
+                       .includes(:user)
+  end
 
   def destroy
     if @report.destroy
