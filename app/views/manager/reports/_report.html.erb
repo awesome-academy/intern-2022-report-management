@@ -10,6 +10,8 @@
   <td><%= report.name %></td>
   <td><%= report.today_plan %></td>
   <td><%= report.created_at.strftime(Settings.reports.report.format_date) %></td>
-  <td><%= report.status %></td>
-  <td><%= t ".detail" %></td>
+  <td><span class="<%= report.status %>_color"><%= report.status %></span></td>
+  <td>
+    <%= link_to t(".detail"), manager_report_path(report.id) %>
+  </td>
 </tr>
