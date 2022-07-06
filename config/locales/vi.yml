@@ -37,6 +37,10 @@ vi:
     comment_form:
       comment: "Bình luận"
       placeholder_input_comment: "Nhập bình luận"
+    account_info:
+      name: "Tên"
+      email: "Email"
+      role: "Phân quyền"
   layouts:
     navbar:
       log_out: "Đăng xuất"
