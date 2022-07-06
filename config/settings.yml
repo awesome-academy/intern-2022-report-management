@@ -14,7 +14,12 @@ report:
 form:
   create_form:
     num_row: 4
+    num_row_comment: 5
 reports:
   report:
     format_datetime: "%d/%m/%Y %H:%M"
     format_date: "%d/%m/%Y"
+comment:
+  max_length: 500
+image:
+  default_avatar: "default-avatar.jpg"

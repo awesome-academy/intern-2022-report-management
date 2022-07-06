@@ -1,6 +1,7 @@
 class Manager::ReportsController < ApplicationController
   before_action :require_login
   before_action :paginate_reports, only: %i(index update)
+  before_action :find_report, only: :show
   before_action{check_role? :manager}
   skip_before_action :verify_authenticity_token
 
@@ -15,7 +16,22 @@ class Manager::ReportsController < ApplicationController
     end
   end
 
+  def show
+    @user = @report.user
+    @comments = Comment.by_report_id(params[:id])
+                       .order_by_created_at
+                       .includes(:user)
+  end
+
   private
+
+  def find_report
+    @report = Report.find_by id: params[:id]
+    return if @report
+
+    flash[:danger] = t ".find_report_error"
+    redirect_to reports_path
+  end
 
   def paginate_reports
     filter_report

@@ -3,7 +3,7 @@
   <td><%= report.name %>
   <td><%= report.today_plan %>
   <td><%= report.created_at.strftime(Settings.reports.report.format_datetime) %></td>
-  <td><%= report.status %></td>
+  <td><span class="<%= report.status %>_color"><%= report.status %></span></td>
   <td class="flex content-center">
       <%= link_to t(".detail"), report_path(report.id), class: "m-l-5 btn btn-info info" %>
       <% if report.waitting? %>
