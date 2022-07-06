@@ -37,6 +37,10 @@ en:
     comment_form:
       comment: "Comment"
       placeholder_input_comment: "Type your comment"
+    account_info:
+      name: "Name"
+      email: "Email"
+      role: "Role"
   layouts:
     navbar:
       log_out: "Log out"
@@ -131,8 +135,9 @@ en:
         division: "Division"
       show:
         title: "Report Detail"
-  account:
+  accounts:
     index:
       title: "Your account"
+      header: "Your Profile"
   comments:
     can_not_comment: "Fail!"
