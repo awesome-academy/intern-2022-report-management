@@ -100,16 +100,7 @@ en:
       date_created: "Date created"
       status: "Status"
     show:
-      report: "REPORT"
-      name: "Writer"
-      division: "Division"
-      created_at: "Created At"
-      today_plan: "Today Plan"
-      actual: "Actual"
-      reason_not_complete: "Reason not complete"
-      tomorrow_plan: "Tomorrow Plan"
-      free_comment: "Free Comment"
-      status: "Status"
+      title: "Report Detail"
     edit:
       title: "Edit report"
       save_change: "Save change"
