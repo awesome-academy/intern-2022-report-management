@@ -41,6 +41,8 @@ vi:
       name: "Tên"
       email: "Email"
       role: "Phân quyền"
+    account_edit:
+      save: "Lưu"
   layouts:
     navbar:
       log_out: "Đăng xuất"
@@ -134,8 +136,19 @@ vi:
         email: "Email"
         name: "Tên"
         division: "Bộ phận"
-  account:
+  accounts:
+    update_success: "Cập nhật tài khoản thành công!"
+    update_faild: "Cập nhật tài khoản thất bại"
     index:
       title: "Thông tin tài khoản"
+      header: "Thông tin cá nhân"
+      edit: "Chỉnh sửa tài khoản"
   comments:
     can_not_comment: "Thất bại!"
+activerecord:
+  errors:
+    models:
+      user:
+        attributes:
+          avatar:
+            wrong_format: "Ảnh cần đúng định dạng"

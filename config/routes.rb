@@ -13,7 +13,7 @@ Rails.application.routes.draw do
       resources :reports, only: %i(index show update)
     end
 
-    resources :accounts, only: %i(index edit)
+    resources :accounts, only: %i(index edit update)
     resources :reports
     resources :comments, only: :create
   end

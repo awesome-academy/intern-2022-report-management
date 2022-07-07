@@ -3,6 +3,7 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "3.0.2"
 
+gem "active_storage_validations", "0.8.2"
 gem "bcrypt", "3.1.13"
 gem "bootstrap-sass", "3.4.1"
 gem "config"
@@ -13,6 +14,8 @@ gem "rails", "~> 6.1.6"
 gem "mysql2", "~> 0.5"
 # Use Puma as the app server
 gem "i18n-js"
+gem "image_processing", "1.9.3"
+gem "mini_magick", "4.9.5"
 gem "puma", "~> 5.0"
 gem "rails-i18n"
 # Use SCSS for stylesheets

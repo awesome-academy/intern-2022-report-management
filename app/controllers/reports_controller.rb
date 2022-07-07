@@ -44,7 +44,7 @@ class ReportsController < ApplicationController
     @user = @report.user
     @comments = Comment.by_report_id(params[:id])
                        .order_by_created_at
-                       .includes(:user)
+                       .includes(user: :avatar_attachment)
   end
 
   def destroy

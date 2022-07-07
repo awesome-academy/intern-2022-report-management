@@ -6,6 +6,8 @@ user:
     max_length: 50
   password:
     min_length: 6
+  image:
+    image_path: ["image/jpeg", "image/gif", "image/png"]
 report:
   column:
     max_length: 255
