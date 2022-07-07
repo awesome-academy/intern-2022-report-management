@@ -41,6 +41,8 @@ en:
       name: "Name"
       email: "Email"
       role: "Role"
+    account_edit:
+      save: "Save"
   layouts:
     navbar:
       log_out: "Log out"
@@ -136,8 +138,18 @@ en:
       show:
         title: "Report Detail"
   accounts:
+    update_success: "Account update successed!"
+    update_faild: "Account update failed!"
     index:
       title: "Your account"
       header: "Your Profile"
+      edit: "Edit Account"
   comments:
     can_not_comment: "Fail!"
+activerecord:
+  errors:
+    models:
+      user:
+        attributes:
+          avatar:
+            wrong_format: "Must be a valid image format"

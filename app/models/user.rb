@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  UPDATABLE_ATTRS = %i(name email password password_confirmation).freeze
+  UPDATABLE_ATTRS = %i(name email password password_confirmation avatar).freeze
 
   enum role: {member: 0, manager: 1, admin: 2}
 
@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :reports, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :notifications, dependent: :destroy
+  has_one_attached :avatar
 
   delegate :name, to: :division, prefix: true
 
@@ -21,7 +22,12 @@ class User < ApplicationRecord
             uniqueness: {case_sensitive: false}
 
   validates :password, presence: true,
-            length: {minimum: Settings.user.password.min_length}
+            length: {minimum: Settings.user.password.min_length},
+            allow_nil: true
+
+  validates :avatar,
+            content_type: {in: Settings.user.image.image_path,
+                           message: :wrong_format}
 
   has_secure_password
 
