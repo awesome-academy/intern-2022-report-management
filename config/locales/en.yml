@@ -61,6 +61,7 @@ en:
       manager: "Manager"
       account: "Account"
       all_user: "All Members"
+      create_user: "Add Account"
   sessions:
     ivalid_account_notify: "Invalid password or account combination"
     login_success_notify: "Log in successed!"
@@ -147,11 +148,17 @@ en:
       delete_success: "Delete Success"
       delete_fail: "Delete Fail!"
       find_user_error: "Can not find user"
+      create_success_notify: "Create user success"
+      create_failed_notify: "Create user fail"
       index:
         title: "Users Management"
         name: "Name"
         email: "Email"
+        division: "Division"
         action: "Action"
+      new:
+        title: "Create User"
+        add: "Add Account"
       member:
         remove: "Remove"
         confirm_delete: "Are you sure want to remove user?"

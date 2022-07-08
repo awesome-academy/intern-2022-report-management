@@ -28,6 +28,9 @@
       <li>
         <%= link_to t(".report"), manager_reports_path %>
       </li>
+      <li>
+        <%= link_to t(".create_user"), new_manager_user_path %>
+      </li>
     <% elsif current_user.admin? %>
       <li>
         <%= link_to t(".account"), accounts_path %>

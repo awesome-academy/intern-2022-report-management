@@ -5,5 +5,5 @@
   <%= text_field_tag :name, params[:name], class: "form-control", placeholder: t(".type_input") %>
   <br/>
   <%= submit_tag t(".search"), class: "btn btn-info" %>
-  <%= button_to t(".show_all"), manager_users_path, class: "btn btn-success" %>
+  <%= link_to t(".show_all"), manager_users_path, class: "btn btn-success" %>
 <% end %>

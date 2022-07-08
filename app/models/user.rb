@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  UPDATABLE_ATTRS = %i(name email password password_confirmation avatar).freeze
+  UPDATABLE_ATTRS = %i(name email password password_confirmation
+                       division_id avatar).freeze
 
   enum role: {member: 0, manager: 1, admin: 2}
 

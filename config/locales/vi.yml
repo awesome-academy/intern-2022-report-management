@@ -61,6 +61,7 @@ vi:
       manager: "Manager"
       account: "Tài khoản"
       all_user: "Tất cả thành viên"
+      create_user: "Tạo tài khoản mới"
   sessions:
     ivalid_account_notify: "Tài khỏan hoặc mật khẩu bị sai."
     login_success_notify: "Đăng nhập thành công!"
@@ -148,11 +149,17 @@ vi:
       delete_success: "Xóa thành công"
       delete_fail: "Xóa thất bại"
       find_user_error: "Không thể tìm thấy người dùng"
+      create_success_notify: "Tạo thành công"
+      create_failed_notify: "Tạo thất bại"
       index:
         title: "Quản lý người dùng"
         name: "Tên"
         email: "Email"
+        division: "Bộ phận"
         action: "Hành động"
+      new:
+        title: "Tạo tài khoản mới"
+        add: "Tạo tài khoản"
       member:
         remove: "Xóa"
         confirm_delete: "Bạn có chắc chắn muốn xóa?"
