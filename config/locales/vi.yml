@@ -151,6 +151,8 @@ vi:
       find_user_error: "Không thể tìm thấy người dùng"
       create_success_notify: "Tạo thành công"
       create_failed_notify: "Tạo thất bại"
+      message_success: "Cập nhật thành công"
+      message_fail: "Cập nhật thất bại"
       index:
         title: "Quản lý người dùng"
         name: "Tên"
@@ -160,12 +162,27 @@ vi:
       new:
         title: "Tạo tài khoản mới"
         add: "Tạo tài khoản"
+      edit:
+        title: "Chỉnh sửa thành viên"
       member:
+        edit: "Chỉnh sửa"
         remove: "Xóa"
         confirm_delete: "Bạn có chắc chắn muốn xóa?"
       show:
         remove: "Xóa"
         confirm_delete: "Bạn có chắc chắn muốn xóa?"
+      address_fields:
+        city: "Tỉnh"
+        country: "Quốc gia"
+        remove_address: "Xóa địa chỉ"
+      form_user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+        add_addresses: "Thêm địa chỉ"
+        division: "Bộ phận"
+        add: "Gửi"
   accounts:
     update_success: "Cập nhật tài khoản thành công!"
     update_faild: "Cập nhật tài khoản thất bại"

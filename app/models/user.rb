@@ -1,6 +1,10 @@
 class User < ApplicationRecord
-  UPDATABLE_ATTRS = %i(name email password password_confirmation
-                       division_id avatar).freeze
+  UPDATABLE_ATTRS = [:name, :email, :password, :password_confirmation,
+                     :division_id, :avatar,
+                      {addresses_attributes: [:id, :city,
+                                             :country,
+                                             :user_id,
+                                             :_destroy]}].freeze
 
   enum role: {member: 0, manager: 1, admin: 2}
 
@@ -10,7 +14,11 @@ class User < ApplicationRecord
   has_many :reports, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :notifications, dependent: :destroy
+  has_many :addresses, dependent: :destroy
   has_one_attached :avatar
+  accepts_nested_attributes_for :addresses,
+                                allow_destroy: true,
+                                reject_if: :all_blank
 
   delegate :name, to: :division, prefix: true
 
