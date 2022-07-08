@@ -55,6 +55,7 @@ vi:
       admin: "Admin"
       manager: "Manager"
       account: "Tài khoản"
+      all_user: "Tất cả thành viên"
   sessions:
     ivalid_account_notify: "Tài khỏan hoặc mật khẩu bị sai."
     login_success_notify: "Đăng nhập thành công!"
@@ -136,6 +137,23 @@ vi:
         email: "Email"
         name: "Tên"
         division: "Bộ phận"
+      show:
+        title: "Chi tiết báo cáo"
+    users:
+      delete_success: "Xóa thành công"
+      delete_fail: "Xóa thất bại"
+      find_user_error: "Không thể tìm thấy người dùng"
+      index:
+        title: "Quản lý người dùng"
+        name: "Tên"
+        email: "Email"
+        action: "Hành động"
+      member:
+        remove: "Xóa"
+        confirm_delete: "Bạn có chắc chắn muốn xóa?"
+      show:
+        remove: "Xóa"
+        confirm_delete: "Bạn có chắc chắn muốn xóa?"
   accounts:
     update_success: "Cập nhật tài khoản thành công!"
     update_faild: "Cập nhật tài khoản thất bại"

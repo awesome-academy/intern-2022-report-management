@@ -63,7 +63,7 @@ class ReportsController < ApplicationController
   end
 
   def paginate_reports reports
-    pagy(reports, items: Settings.report.items.item_per_page)
+    pagy(reports, items: Settings.paginate.items.item_per_page)
   end
 
   def find_report

@@ -1,0 +1,9 @@
+<tr>
+  <td>
+    <%= link_to member.name, manager_user_path(member) %>
+  </td>
+  <td><%= member.email %></td>
+  <td>
+    <%= button_to t(".remove"), manager_user_path(member), method: :delete, data: { confirm: t(".confirm_delete") }, class: "btn btn-danger danger",remote: :true %>
+  </td>
+</tr>

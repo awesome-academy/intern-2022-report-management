@@ -23,6 +23,9 @@
         <%= link_to t(".division"), "#" %>
       </li>
       <li>
+        <%= link_to t(".all_user"), manager_users_path %>
+      </li>
+      <li>
         <%= link_to t(".report"), manager_reports_path %>
       </li>
     <% elsif current_user.admin? %>

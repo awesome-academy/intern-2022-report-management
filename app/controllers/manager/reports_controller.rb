@@ -35,7 +35,8 @@ class Manager::ReportsController < ApplicationController
 
   def paginate_reports
     filter_report
-    @pagy, @reports = pagy(@reports, items: Settings.report.items.item_per_page)
+    @pagy, @reports = pagy(@reports,
+                           items: Settings.paginate.items.item_per_page)
   end
 
   def filter_report

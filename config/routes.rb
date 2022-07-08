@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
     namespace :manager do
       resources :reports, only: %i(index show update)
+      resources :users
     end
 
     resources :accounts, only: %i(index edit update)
