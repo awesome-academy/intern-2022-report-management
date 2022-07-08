@@ -43,6 +43,11 @@ vi:
       role: "Phân quyền"
     account_edit:
       save: "Lưu"
+    search_user:
+      user_searching: "Tìm kiếm thành viên"
+      type_input: "Tìm kiếm theo tên"
+      search: "Tìm kiếm"
+      show_all: "Hiển thị tất cả"
   layouts:
     navbar:
       log_out: "Đăng xuất"

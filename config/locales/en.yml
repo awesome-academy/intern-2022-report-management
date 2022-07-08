@@ -43,6 +43,11 @@ en:
       role: "Role"
     account_edit:
       save: "Save"
+    search_user:
+      user_searching: "Search User"
+      type_input: "Search By Name"
+      search: "Search"
+      show_all: "Show All"
   layouts:
     navbar:
       log_out: "Log out"

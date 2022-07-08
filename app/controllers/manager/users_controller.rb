@@ -3,7 +3,11 @@ class Manager::UsersController < ApplicationController
   before_action :find_user, only: %i(show destroy)
 
   def index
-    @members = User.member
+    @members = if params[:name]
+                 User.by_name(params[:name])
+               else
+                 User.member
+               end
     @pagy, @members = pagy(@members,
                            items: Settings.paginate.items.item_per_page)
   end
