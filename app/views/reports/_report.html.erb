@@ -1,6 +1,6 @@
 <tr>
   <td><%= report.id %></td>
-  <td><%= report.name %>
+  <td><%= report.user_name %>
   <td><%= report.today_plan %>
   <td><%= report.created_at.strftime(Settings.reports.report.format_datetime) %></td>
   <td><span class="<%= report.status %>_color"><%= report.status %></span></td>

@@ -11,8 +11,6 @@ user:
 report:
   column:
     max_length: 255
-  items:
-    item_per_page: 5
 form:
   create_form:
     num_row: 4
@@ -25,3 +23,6 @@ comment:
   max_length: 500
 image:
   default_avatar: "default-avatar.jpg"
+paginate:
+  items:
+    item_per_page: 5

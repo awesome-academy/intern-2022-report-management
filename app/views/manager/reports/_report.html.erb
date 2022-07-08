@@ -7,7 +7,7 @@
     <% end %>
   </td>
   <td><%= report.division_name %>
-  <td><%= report.name %></td>
+  <td><%= report.user_name %></td>
   <td><%= report.today_plan %></td>
   <td><%= report.created_at.strftime(Settings.reports.report.format_date) %></td>
   <td><span class="<%= report.status %>_color"><%= report.status %></span></td>

@@ -10,7 +10,7 @@ class Report < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
-  delegate :name, to: :user
+  delegate :name, :email, to: :user, prefix: true
 
   delegate :name, to: :division, prefix: true
 

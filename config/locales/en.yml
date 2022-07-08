@@ -55,6 +55,7 @@ en:
       admin: "Admin"
       manager: "Manager"
       account: "Account"
+      all_user: "All Members"
   sessions:
     ivalid_account_notify: "Invalid password or account combination"
     login_success_notify: "Log in successed!"
@@ -137,6 +138,21 @@ en:
         division: "Division"
       show:
         title: "Report Detail"
+    users:
+      delete_success: "Delete Success"
+      delete_fail: "Delete Fail!"
+      find_user_error: "Can not find user"
+      index:
+        title: "Users Management"
+        name: "Name"
+        email: "Email"
+        action: "Action"
+      member:
+        remove: "Remove"
+        confirm_delete: "Are you sure want to remove user?"
+      show:
+        remove: "Remove"
+        confirm_delete: "Are you sure want to remove user?"
   accounts:
     update_success: "Account update successed!"
     update_faild: "Account update failed!"
