@@ -4,9 +4,10 @@ class Manager::UsersController < ApplicationController
 
   def index
     @members = if params[:name]
-                 User.by_name(params[:name]).includes(:division, :addresses)
+                 User.recent.by_name(params[:name]).includes(:division,
+                                                             :addresses)
                else
-                 User.member.includes(:division, :addresses)
+                 User.recent.member.includes(:division, :addresses)
                end
     @pagy, @members = pagy(@members,
                            items: Settings.paginate.items.item_per_page)

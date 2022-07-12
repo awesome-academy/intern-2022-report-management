@@ -42,6 +42,8 @@ class User < ApplicationRecord
 
   before_save :downcase_email
 
+  scope :recent, ->{order created_at: :desc}
+
   scope :by_division_id,
         (lambda do |division_id|
           where(division_id: division_id)

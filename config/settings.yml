@@ -23,6 +23,9 @@ comment:
   max_length: 500
 image:
   default_avatar: "default-avatar.jpg"
+  en_image: "en.jpg"
+  vi_image: "vi.jpg"
 paginate:
   items:
     item_per_page: 5
+language_size: 30
