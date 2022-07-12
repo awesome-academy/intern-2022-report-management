@@ -1,12 +1,12 @@
 class Manager::UsersController < ApplicationController
   before_action :require_login, ->{check_role? :manager}
-  before_action :find_user, only: %i(show destroy)
+  before_action :find_user, only: %i(show destroy edit update)
 
   def index
     @members = if params[:name]
-                 User.by_name(params[:name]).includes(:division)
+                 User.by_name(params[:name]).includes(:division, :addresses)
                else
-                 User.member.includes(:division)
+                 User.member.includes(:division, :addresses)
                end
     @pagy, @members = pagy(@members,
                            items: Settings.paginate.items.item_per_page)
@@ -25,6 +25,18 @@ class Manager::UsersController < ApplicationController
     else
       flash.now[:danger] = t ".create_failed_notify"
       render :new
+    end
+  end
+
+  def edit; end
+
+  def update
+    if @user.update user_params
+      flash[:success] = t ".message_success"
+      redirect_to manager_users_path
+    else
+      flash[:danger] = t ".message_fail"
+      render :edit
     end
   end
 

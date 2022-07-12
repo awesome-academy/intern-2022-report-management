@@ -150,6 +150,8 @@ en:
       find_user_error: "Can not find user"
       create_success_notify: "Create user success"
       create_failed_notify: "Create user fail"
+      message_success: "Update success"
+      message_fail: "Update fail"
       index:
         title: "Users Management"
         name: "Name"
@@ -159,12 +161,27 @@ en:
       new:
         title: "Create User"
         add: "Add Account"
+      edit:
+        title: "Edit User"
       member:
+        edit: "Edit"
         remove: "Remove"
         confirm_delete: "Are you sure want to remove user?"
       show:
         remove: "Remove"
         confirm_delete: "Are you sure want to remove user?"
+      address_fields:
+        city: "City"
+        country: "Country"
+        remove_address: "Remove Address"
+      form_user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        add_addresses: "Add Addresses"
+        division: "Division"
+        add: "Submit"
   accounts:
     update_success: "Account update successed!"
     update_faild: "Account update failed!"

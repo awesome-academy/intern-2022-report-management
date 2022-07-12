@@ -6,6 +6,7 @@ ruby "3.0.2"
 gem "active_storage_validations", "0.8.2"
 gem "bcrypt", "3.1.13"
 gem "bootstrap-sass", "3.4.1"
+gem "cocoon"
 gem "config"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "jquery-rails", "4.3.1"
@@ -20,6 +21,7 @@ gem "puma", "~> 5.0"
 gem "rails-i18n"
 # Use SCSS for stylesheets
 gem "sass-rails", ">= 6"
+gem "webpacker", "~> 5.0"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.7"
 # Use Redis adapter to run Action Cable in production
