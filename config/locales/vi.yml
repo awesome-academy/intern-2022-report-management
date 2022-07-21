@@ -1,6 +1,6 @@
 vi:
   js:
-    error_comment: "Không thể tạo bình luận! Nội dung quá dài (tối đa 500 kí tự)"
+    error_comment: "Không thể tạo bình luận! Hãy nhập bình luận trước khi ấn comment"
   home:
     index:
       title: "Daily report"
@@ -48,6 +48,7 @@ vi:
       type_input: "Tìm kiếm theo tên"
       search: "Tìm kiếm"
       show_all: "Hiển thị tất cả"
+      add_account: "Tạo tài khoản mới"
   layouts:
     navbar:
       log_out: "Đăng xuất"

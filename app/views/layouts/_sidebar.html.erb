@@ -10,17 +10,11 @@
         <%= link_to t(".account"), accounts_path %>
       </li>
       <li>
-        <%= link_to t(".division"), "#" %>
-      </li>
-      <li>
         <%= link_to t(".report"), reports_path %>
       </li>
     <% elsif current_user.manager? %>
       <li>
         <%= link_to t(".account"), accounts_path %>
-      </li>
-      <li>
-        <%= link_to t(".division"), "#" %>
       </li>
       <li>
         <%= link_to t(".all_user"), manager_users_path %>

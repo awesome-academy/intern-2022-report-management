@@ -4,18 +4,22 @@
   </div>
   <div class="form-group">
     <%= f.label :name, t(".name") %>
+    <span class="require-field">*</span>
     <%= f.text_field :name, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :email, t(".email") %>
+    <span class="require-field">*</span>
     <%= f.email_field :email, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :password, t(".password") %>
+    <span class="require-field">*</span>
     <%= f.password_field :password, class: "form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :password_confirmation, t(".password_confirmation") %>
+    <span class="require-field">*</span>
     <%= f.password_field :password_confirmation, class: "form-control" %>
   </div>
   <div class="form-group">

@@ -5,8 +5,8 @@
   <td><%= member.email %></td>
   <td><%= member.division_name %></td>
   <td><%= member.addresses.map(&:detail).join(",") %></td>
-  <td class="flex">
-    <%= link_to t(".edit"), edit_manager_user_path(member), class: "btn btn-success success" %>
-    <%= button_to t(".remove"), manager_user_path(member), method: :delete, data: { confirm: t(".confirm_delete") }, class: "btn btn-danger danger" %>
+  <td class="flex content-center">
+    <%= link_to t(".edit"), edit_manager_user_path(member), class: "btn btn-success success m-l-5" %>
+    <%= button_to t(".remove"), manager_user_path(member), method: :delete, data: { confirm: t(".confirm_delete") }, class: "btn btn-danger danger m-l-5" %>
   </td>
 </tr>

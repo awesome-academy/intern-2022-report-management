@@ -1,6 +1,6 @@
 en:
   js:
-    error_comment: "Can not comment! The content is too long (maximum 500 characters)"
+    error_comment: "Can not comment! Please type a comment before pressing enter"
   home:
     index:
       title: "Daily report"
@@ -48,6 +48,7 @@ en:
       type_input: "Search By Name"
       search: "Search"
       show_all: "Show All"
+      add_account: "Add Account"
   layouts:
     navbar:
       log_out: "Log out"

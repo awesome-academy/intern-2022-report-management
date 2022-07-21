@@ -5,6 +5,16 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li>
+          <%= link_to locale: "en" do %>
+            <%= image_tag Settings.image.en_image, size: Settings.language_size %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to locale: "vi" do %>
+            <%= image_tag Settings.image.vi_image, size: Settings.language_size %>
+          <% end %>
+        </li>
+        <li>
           <%= link_to t(".log_out"), logout_path, method: :delete %>
         </li>
       </ul>

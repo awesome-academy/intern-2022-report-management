@@ -1,14 +1,13 @@
 <tr>
-  <td><%= report.id %></td>
   <td><%= report.user_name %>
   <td><%= report.today_plan %>
   <td><%= report.created_at.strftime(Settings.reports.report.format_datetime) %></td>
   <td><span class="<%= report.status %>_color"><%= report.status %></span></td>
   <td class="flex content-center">
-      <%= link_to t(".detail"), report_path(report.id), class: "m-l-5 btn btn-info info" %>
-      <% if report.waitting? %>
-        <%= button_to t(".delete"), report_path(report), method: :delete, data: { confirm: t(".confirm_delete") }, class: "m-l-5 btn btn-danger danger" %>
-        <%= link_to t(".edit"), edit_report_path(report), class: "m-l-5 btn btn-primary primary" %>
-      <% end %>
-    </td>
+    <%= link_to t(".detail"), report_path(report.id), class: "m-l-5 btn btn-info info" %>
+    <% if report.waitting? %>
+      <%= button_to t(".delete"), report_path(report), method: :delete, data: { confirm: t(".confirm_delete") }, class: "m-l-5 btn btn-danger danger" %>
+      <%= link_to t(".edit"), edit_report_path(report), class: "m-l-5 btn btn-primary primary" %>
+    <% end %>
+  </td>
 </tr>

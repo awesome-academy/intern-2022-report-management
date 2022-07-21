@@ -22,7 +22,10 @@
       <p>
         <%= t ".division" %>
       </p>
-      <%= select_tag :division_id, options_for_select(Division.pluck(:name, :id)), value: params[:division_id], prompt: "all", class: "input-filter-report" %>
+      <%= select_tag :division_id,
+          options_for_select(Division.pluck(:name, :id), params.dig(:division_id)),
+          value: params[:division_id],
+          prompt: "all", class: "input-filter-report" %>
     </div>
     <div class="div-submit-filter-report">
       <%= submit_tag t(".filter"), class: "btn btn-success" %>

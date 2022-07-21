@@ -1,4 +1,4 @@
-<% if @status %>
+<% unless @status %>
   alert(I18n.t("js.error_comment"));
 <% else %>
   $("#all-comments").prepend(
