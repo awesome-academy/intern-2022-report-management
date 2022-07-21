@@ -34,10 +34,6 @@ gem "jbuilder", "~> 2.7"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "pagy"
 
-group :development, :test do
-  gem "pry-rails"
-end
-
 group :development do
   gem "bullet"
   gem "listen", "~> 3.3"
@@ -49,17 +45,17 @@ end
 group :test do
   gem "capybara", ">= 3.26"
   gem "selenium-webdriver", ">= 4.0.0.rc1"
+  gem "simplecov"
+  gem "simplecov-rcov"
   gem "webdrivers"
 end
 
 group :development, :test do
+  gem "pry-rails"
+  gem "rspec-rails", "~> 4.0.1"
   gem "rubocop", "~> 1.26", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
-end
-
-group :development, :test do
-  gem "rspec-rails", "~> 4.0.1"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
