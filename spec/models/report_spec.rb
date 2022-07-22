@@ -58,40 +58,56 @@ RSpec.describe Report, type: :model do
     end
 
     describe ".active" do
-      it { expect(Report.active.size).to eq(3) }
+      it "return report active" do
+        expect(Report.active.size).to eq(3)
+      end
     end
 
     describe ".by_ids" do
-      it { expect(Report.by_ids(2)).to eq(Report.where(id: 2)) }
+      it "return report have report_id 2" do
+        expect(Report.by_ids(2)).to eq(Report.where(id: 2))
+      end
     end
 
     describe ".by_users" do
-      it { expect(Report.by_users(1)).to eq(Report.where(user_id: 1)) }
+      it "return user have user_id 1" do
+        expect(Report.by_users(1)).to eq(Report.where(user_id: 1))
+      end
     end
 
     describe ".by_status" do
       context "when status is waitting" do
-        it { expect(Report.by_status(:waitting)).to eq([report1, report3, report4]) }
+        it "return report have status watting" do
+          expect(Report.by_status(:waitting)).to eq([report1, report3, report4])
+        end
       end
 
       context "when status is nil" do
-        it { expect(Report.by_status(nil)).to eq([report1, report2, report3, report4]) }
+        it "return all reports status nil" do
+          expect(Report.by_status(nil)).to eq([report1, report2, report3, report4])
+        end
       end
     end
 
     describe ".by_created_at" do
       context "when order by nil" do
-        it { expect(Report.by_created_at(nil)).to eq ([report1, report2, report3, report4]) }
+        it "return all reports created nil" do
+          expect(Report.by_created_at(nil)).to eq ([report1, report2, report3, report4])
+        end
       end
     end
 
     describe ".by_division_id" do
       context "when by division id" do
-        it { expect(Report.by_division_id(1)).to eq(Report.where(division_id: 1)) }
+        it "return division_id 1" do
+          expect(Report.by_division_id(1)).to eq(Report.where(division_id: 1))
+        end
       end
 
       context "when order by nil" do
-        it { expect(Report.by_division_id(nil)).to eq [report1, report2, report3, report4] }
+        it "return all reports" do
+          expect(Report.by_division_id(nil)).to eq [report1, report2, report3, report4]
+        end
       end
     end
   end
