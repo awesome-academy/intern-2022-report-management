@@ -81,6 +81,7 @@ en:
     find_report_error: "Can not find report!"
     edit_report_success: "Success!"
     edit_report_faild: "Faild!"
+    error_create_path: "Can not create report! You created a report today."
     delete_success: "Delete Success"
     delete_fail: "Delete Fail"
     index:

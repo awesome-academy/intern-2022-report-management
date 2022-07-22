@@ -6,6 +6,7 @@ ruby "3.0.2"
 gem "active_storage_validations", "0.8.2"
 gem "bcrypt", "3.1.13"
 gem "bootstrap-sass", "3.4.1"
+gem "ckeditor", github: "galetahub/ckeditor"
 gem "cocoon"
 gem "config"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -26,7 +27,7 @@ gem "webpacker", "~> 5.0"
 gem "jbuilder", "~> 2.7"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
-
+gem "faker", "~> 2.12"
 # Use Active Storage variant
 # gem "image_processing", "~> 1.2"
 
@@ -44,14 +45,19 @@ end
 
 group :test do
   gem "capybara", ">= 3.26"
+  gem "database_cleaner", "~> 1.5"
   gem "selenium-webdriver", ">= 4.0.0.rc1"
+  gem "shoulda-matchers"
   gem "simplecov"
   gem "simplecov-rcov"
   gem "webdrivers"
 end
 
 group :development, :test do
+  gem "factory_bot_rails"
+  gem "pry-nav"
   gem "pry-rails"
+  gem "rails-controller-testing"
   gem "rspec-rails", "~> 4.0.1"
   gem "rubocop", "~> 1.26", require: false
   gem "rubocop-checkstyle_formatter", require: false
