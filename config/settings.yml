@@ -19,6 +19,9 @@ reports:
   report:
     format_datetime: "%d/%m/%Y %H:%M"
     format_date: "%d/%m/%Y"
+  status:
+    waitting: 0
+    checked: 1
 comment:
   max_length: 500
 image:
@@ -29,3 +32,5 @@ paginate:
   items:
     item_per_page: 5
 language_size: 30
+rspec:
+  default_password: "11111111"
