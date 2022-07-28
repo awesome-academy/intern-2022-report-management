@@ -2,6 +2,7 @@ class ReportsController < ApplicationController
   before_action :require_login
   before_action :find_report, except: %i(new create index)
   before_action{check_role? :member}
+  before_action :today_reports, only: :new
 
   def index
     @reports = current_user.reports.active.recent
@@ -13,7 +14,10 @@ class ReportsController < ApplicationController
   end
 
   def new
-    @report = current_user.reports.build
+    return @report = current_user.reports.build if @today_reports.blank?
+
+    flash[:danger] = t ".error_create_path"
+    redirect_to reports_path
   end
 
   def create
@@ -31,6 +35,7 @@ class ReportsController < ApplicationController
   def edit; end
 
   def update
+    # binding.pry
     if @report.update report_params
       flash[:success] = t ".edit_report_success"
       redirect_to reports_path
@@ -72,5 +77,11 @@ class ReportsController < ApplicationController
 
     flash[:danger] = t ".find_report_error"
     redirect_to reports_path
+  end
+
+  def today_reports
+    @today_reports = Report.by_users(current_user.id)
+                           .by_created_at(Date.current)
+                           .active
   end
 end
