@@ -1,9 +1,5 @@
 require "rails_helper"
 
-def log_in user
-  session[:user_id] = user.id
-end
-
 RSpec.describe ReportsController, type: :controller do
   let(:division) {create :division}
   let!(:current_user){create :user}
@@ -13,27 +9,27 @@ RSpec.describe ReportsController, type: :controller do
 
   context "When user does not log in" do
     describe "GET #index" do
-      before {get :index}
+      before {get :index, params: {locale: "en"}}
 
-      it { expect(response).to redirect_to login_path }
+      it { expect(response).to redirect_to new_user_session_path }
     end
 
     describe "GET #new" do
-      before {get :new}
+      before {get :new, params: {locale: "en"}}
 
-      it { expect(response).to redirect_to login_path }
+      it { expect(response).to redirect_to new_user_session_path }
     end
 
     describe "GET #edit" do
-      before {get :edit, params: {id: reports[0].id}}
+      before {get :edit, params: {id: reports[0].id, locale: "en"}}
 
-      it { expect(response).to redirect_to login_path }
+      it { expect(response).to redirect_to new_user_session_path }
     end
 
     describe "GET #show" do
-      before {get :show, params: {id: reports[0].id}}
+      before {get :show, params: {id: reports[0].id, locale: "en"}}
 
-      it { expect(response).to redirect_to login_path }
+      it { expect(response).to redirect_to new_user_session_path }
     end
   end
 

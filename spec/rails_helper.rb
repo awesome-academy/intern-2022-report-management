@@ -21,7 +21,7 @@ require 'rspec/rails'
 # require only the support files necessary.
 #
 Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
-
+include ControllerMacros
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
 begin
@@ -59,12 +59,19 @@ RSpec.configure do |config|
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
+
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Warden::Test::Helpers
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
   require "simplecov"
   require "simplecov-rcov"
   require "shoulda/matchers"
   require "factory_bot_rails"
+  require "devise"
   class SimpleCov::Formatter::MergedFormatter
     def format(result)
       SimpleCov::Formatter::HTMLFormatter.new.format(result)

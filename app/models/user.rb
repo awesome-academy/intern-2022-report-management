@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   UPDATABLE_ATTRS = [:name, :email, :password, :password_confirmation,
                      :division_id, :avatar,
                       {addresses_attributes: [:id, :city,
@@ -37,8 +39,6 @@ class User < ApplicationRecord
   validates :avatar,
             content_type: {in: Settings.user.image.image_path,
                            message: :wrong_format}
-
-  has_secure_password
 
   before_save :downcase_email
 

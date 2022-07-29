@@ -20,12 +20,6 @@
     <p><%= t ".address" %></p>
     <%= user.addresses.map(&:detail).join(",") %>
   </div>
-  <% if user.member? %>
-    <div class="col-md-12 box-info">
-      <p><%= t ".division" %></p>
-      <%= user.division_name %>
-    </div>
-  <% end %>
   <div class="col-md-12 box-info">
     <p><%= t ".role" %></p>
     <%= user.role %>
