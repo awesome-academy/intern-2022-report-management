@@ -1,7 +1,6 @@
 class ReportsController < ApplicationController
-  before_action :require_login
   before_action :find_report, except: %i(new create index)
-  before_action{check_role? :member}
+  before_action ->{check_role? :member}
   before_action :today_reports, only: :new
 
   def index

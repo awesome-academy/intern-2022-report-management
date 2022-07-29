@@ -36,3 +36,6 @@ rspec:
   default_password: "11111111"
   factory_reports_size: 15
   factory_comments_size: 10
+email:
+  host: "localhost:3000"
+  default: "abcdef9@gmail.com"

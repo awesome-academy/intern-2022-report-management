@@ -1,5 +1,4 @@
 class AccountsController < ApplicationController
-  before_action :require_login
   before_action :find_user, only: %i(index edit update)
 
   def index; end

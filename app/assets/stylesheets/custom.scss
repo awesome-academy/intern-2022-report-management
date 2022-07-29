@@ -436,3 +436,19 @@ select#user_division_id {
 .flex {
   display: flex;
 }
+
+.alert-notice {
+  color: $alert-notice;
+  background-color: $alert-notice-background;
+  border-color: $alert-notice-border;
+}
+
+.alert-alert {
+  color: $alert-alert;
+  background-color: $alert-alert-background;
+  border-color: $alert-alert-border;
+}
+
+.auth-title-color {
+  color: $auth_title_color
+}
