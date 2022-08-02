@@ -34,7 +34,6 @@ class ReportsController < ApplicationController
   def edit; end
 
   def update
-    # binding.pry
     if @report.update report_params
       flash[:success] = t ".edit_report_success"
       redirect_to reports_path

@@ -6,6 +6,7 @@ user:
     max_length: 50
   password:
     min_length: 6
+    regex: !ruby/regexp /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s])/i
   image:
     image_path: ["image/jpeg", "image/gif", "image/png"]
 report:
@@ -33,7 +34,7 @@ paginate:
     item_per_page: 10
 language_size: 30
 rspec:
-  default_password: "11111111"
+  default_password: "Vdd@11111111"
   factory_reports_size: 15
   factory_comments_size: 10
 email:

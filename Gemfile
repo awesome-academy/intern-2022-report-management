@@ -19,6 +19,8 @@ gem "mysql2", "~> 0.5"
 gem "i18n-js"
 gem "image_processing", "1.9.3"
 gem "mini_magick", "4.9.5"
+gem "omniauth-facebook"
+gem "omniauth-google-oauth2"
 gem "puma", "~> 5.0"
 gem "rails-i18n"
 # Use SCSS for stylesheets
@@ -31,6 +33,7 @@ gem "jbuilder", "~> 2.7"
 gem "faker", "~> 2.12"
 # Use Active Storage variant
 # gem "image_processing", "~> 1.2"
+gem "omniauth-rails_csrf_protection"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.4", require: false
