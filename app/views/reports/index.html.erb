@@ -9,7 +9,7 @@
     </button>
   </div>
   <div class="div-report-filter">
-    <%= render "filter_form" %>
+    <%= render "filter_form", report: @report %>
   </div>
   <% if current_user.reports.any? %>
     <div id="all-report">

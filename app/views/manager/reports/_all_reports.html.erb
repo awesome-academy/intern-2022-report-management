@@ -14,8 +14,8 @@
         <th><%= t ".division" %></th>
         <th><%= t ".name" %></th>
         <th><%= t ".plan" %></th>
-        <th><%= t ".date_created" %></th>
-        <th><%= t ".status" %></th>
+        <th><%= sort_link @report, :created_at, t(".date_created") %></th>
+        <th><%= sort_link @report, :status, t(".status") %></th>
         <th><%= t ".action" %></th>
       </tr>
     </thead>
