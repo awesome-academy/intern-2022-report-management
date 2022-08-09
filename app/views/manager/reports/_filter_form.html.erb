@@ -1,34 +1,31 @@
 <div class="input-group manager-form-group" id="form-report-filter">
-  <%= form_tag manager_reports_path, method: :get, class: "manager-form-filter" do %>
+  <%= search_form_for report, url: manager_reports_path do |f| %>
     <div class="filter-items">
       <p>
         <%= t ".date_created" %>
       </p>
-      <%= date_field :date, "", value: params[:date], class: "input-filter-report" %>
+      <%= f.date_field :created_at_eq, class: "input-filter-report" %>
     </div>
     <div class="filter-items">
       <p>
         <%= t ".status" %>
       </p>
-      <%= select_tag :status, options_for_select(Report.statuses.to_a, params[:status]), prompt: "all", class: "input-filter-report" %>
+      <%= f.select :status_eq, Settings.select_option.filter_status, {}, { class: "input-filter-report" } %>
     </div>
     <div class="filter-items">
       <p>
         <%= t ".name" %>
       </p>
-      <%= text_field_tag :name, params[:name], class: "input-filter-report" %>
+      <%= f.text_field :user_name_cont, class: "input-filter-report" %>
     </div>
     <div class="filter-items">
       <p>
         <%= t ".division" %>
       </p>
-      <%= select_tag :division_id,
-          options_for_select(Division.pluck(:name, :id), params.dig(:division_id)),
-          value: params[:division_id],
-          prompt: "all", class: "input-filter-report" %>
+      <%= f.select :division_id_eq, Settings.select_option.filter_division, {}, { class: "input-filter-report" } %>
     </div>
     <div class="div-submit-filter-report">
-      <%= submit_tag t(".filter"), class: "btn btn-success" %>
+      <%= f.submit t(".filter"), class: "btn btn-success" %>
     </div>
   <% end %>
 </div>

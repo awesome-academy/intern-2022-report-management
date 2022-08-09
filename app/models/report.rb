@@ -20,6 +20,10 @@ class Report < ApplicationRecord
   validates :reason_not_complete, :free_comment,
             length: {maximum: Settings.report.column.max_length}
 
+  ransacker :created_at, type: :date do
+    Arel.sql("date(reports.created_at)")
+  end
+
   scope :recent, ->{order created_at: :desc}
   scope :active, ->{where deleted: false}
   scope :by_ids, ->(report_ids){where id: report_ids}
@@ -31,6 +35,16 @@ class Report < ApplicationRecord
   scope :by_created_at,
         (lambda do |date|
           where("date(created_at) = ?", date) if date.present?
+        end)
+  scope :order_by_created,
+        (lambda do |type_order|
+          type_order = type_order.presence || :desc
+          order created_at: type_order
+        end)
+  scope :order_by_status,
+        (lambda do |type_order|
+          type_order = type_order.presence || :asc
+          order status: type_order
         end)
   scope :by_division_id,
         (lambda do |division_id|

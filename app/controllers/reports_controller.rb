@@ -4,11 +4,12 @@ class ReportsController < ApplicationController
   before_action :today_reports, only: :new
 
   def index
-    @reports = current_user.reports.active.recent
-    if params[:filter]
-      @reports = @reports.by_status(params[:filter][:status])
-                         .by_created_at(params[:filter][:created_at])
-    end
+    @report = Report.ransack params[:q]
+    @reports = @report.result
+                      .by_users(current_user.id)
+                      .active
+                      .recent
+
     @pagy, @reports = paginate_reports(@reports)
   end
 

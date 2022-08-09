@@ -23,6 +23,7 @@ gem "omniauth-facebook"
 gem "omniauth-google-oauth2"
 gem "puma", "~> 5.0"
 gem "rails-i18n"
+gem "ransack"
 # Use SCSS for stylesheets
 gem "sass-rails", ">= 6"
 gem "webpacker", "~> 5.0"

@@ -39,13 +39,14 @@ class Manager::ReportsController < ApplicationController
   end
 
   def filter_report
-    @reports = Report.by_users(user_in_division)
-                     .active
-                     .by_division_id(params[:division_id])
-                     .by_created_at(params[:date]&.first)
-                     .by_status(params[:status])
-                     .recent
-                     .includes(:user, :division)
+    @report = Report.ransack params[:q]
+    @reports = @report.result
+                      .includes(:user, :division)
+                      .active
+    return if @report.sorts.present?
+
+    @reports = @reports.order_by_status(:asc)
+                       .order_by_created(:desc)
   end
 
   def user_in_division

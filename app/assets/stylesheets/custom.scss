@@ -248,6 +248,10 @@ a[aria-expanded="true"]::before {
   padding: 30px 0px;
 }
 
+.report_search {
+  display: flex;
+}
+
 .input-filter-report {
   width: 100%;
   padding: 10px;
@@ -340,6 +344,7 @@ a[aria-expanded="true"]::before {
 
 .filter-items {
   width: 20%;
+  margin-right: 10px;
 }
 
 select#report_division_id {

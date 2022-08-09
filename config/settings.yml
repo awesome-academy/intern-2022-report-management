@@ -40,3 +40,6 @@ rspec:
 email:
   host: "localhost:3000"
   default: "abcdef9@gmail.com"
+select_option:
+  filter_status: [["All", ""], ["Waitting", "0"], ["Checked", "1"]]
+  filter_division: [["All", ""], ["PHP", "1"], ["Ruby", "2"]]
